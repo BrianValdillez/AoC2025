@@ -1,5 +1,3 @@
-import sys
-
 FILEPATH = "input.txt"
 STARTING_VALUE = 50
 TARGET_VALUE = 0
@@ -10,15 +8,9 @@ def read_file(filepath):
     return ""
 
 def main():
-    # Check for alternate mode
-    alt = False
-    if len(sys.argv) >= 2 and sys.argv[1] == 'B':
-        alt = True
-
     # Load safe data and stick into a list.
     input = read_file(FILEPATH)
     safe_inputs = input.split("\n")
-    #print(safe_inputs)
 
     dial_value = STARTING_VALUE
     print(f"- The dial starts by pointing at {STARTING_VALUE}.")
